@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.login.andriod.tictactoe.MainActivity"
+    android:background="@mipmap/background_new">
+   <!-- <ImageView
+        android:layout_width="150dp"
+        android:layout_height="300dp"
+        android:src="@drawable/logo_2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imageView" />-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TicTacToe(X and O)"
+        android:textSize="40sp"
+        android:textStyle="bold|italic"
+        android:textColorHint="@color/dark"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="220dp"
+        android:id="@+id/textView" />
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="SoloMode"
+        android:textSize="17dp"
+        android:textStyle="bold|italic"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_marginTop="22dp"
+        android:id="@+id/button1"
+        android:onClick="solo_click"/>
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="MultiPlayer"
+        android:textSize="17dp"
+        android:textStyle="bold|italic"
+        android:onClick="multiplayer_click"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/button1"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
+
+</RelativeLayout>
