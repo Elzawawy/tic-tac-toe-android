@@ -12,9 +12,11 @@ import java.util.ArrayList;
 public class Game {
     private Player Player1;
     private Player Player2;
+    private ArrayList<Integer> emptyCells;
     public Game(Player player1,Player player2){
         this.Player1=player1;
         this.Player2=player2;
+        this.emptyCells = ((UIplayer)Player2).getEmptyCells();
     }
     public void playMultiMode(View view){
         Button buselected = (Button)view;
@@ -35,7 +37,6 @@ public class Game {
         }
     }
     public void playSoloMode(View view){
-        ArrayList<Integer> emptyCells = ((UIplayer)Player2).getEmptyCells();
         if(Player1.isActive()){
             Button buselected = (Button)view;
             buselected.setEnabled(false);
@@ -44,13 +45,22 @@ public class Game {
             Player2.setActive(true);
             Player1.setActive(false);
             Player1.setCell(Player1.getCellNumber());
-            emptyCells.remove(Player1.getCellNumber());
-
+            if(emptyCells.size() > 1)
+                emptyCells.remove((Integer) Player1.getCellNumber());
+            playSoloMode(view);
         }
         else if(Player2.isActive()) {
-
-
-
+            int index = emptyCells.get(0);
+            Player2.findcellNumberByID(index);
+            System.out.println("DEBUG "+index);
+            Button buselected = view.getRootView().findViewById(Player2.cellNumber);
+            buselected.setEnabled(false);
+            buselected.setBackgroundResource(R.drawable.o);
+            Player2.setActive(false);
+            Player1.setActive(true);
+            Player2.setCell(index);
+            if(emptyCells.size() > 1)
+                emptyCells.remove(0);
         }
 
     }
