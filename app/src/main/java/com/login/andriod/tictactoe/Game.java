@@ -46,9 +46,10 @@ public class Game {
             Player2.setActive(true);
             Player1.setActive(false);
             Player1.setCell(Player1.getCellNumber());
-            if(emptyCells.size() > 1)
+            if(emptyCells.size() >= 1)
                 emptyCells.remove((Integer) Player1.getCellNumber());
-            playSoloMode(view);
+            if(emptyCells.size() > 1)
+                playSoloMode(view);
         }
         else if(Player2.isActive()) {
             int index = emptyCells.get(0);
@@ -59,7 +60,7 @@ public class Game {
             Player2.setActive(false);
             Player1.setActive(true);
             Player2.setCell(index);
-            if(emptyCells.size() > 1)
+            if(emptyCells.size() >= 1)
                 emptyCells.remove(0);
         }
 
