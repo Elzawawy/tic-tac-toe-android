@@ -16,7 +16,8 @@ public class Game {
     public Game(Player player1,Player player2){
         this.Player1=player1;
         this.Player2=player2;
-        this.emptyCells = ((UIplayer)Player2).getEmptyCells();
+        if(Player2 instanceof UIplayer)
+            this.emptyCells = ((UIplayer)Player2).getEmptyCells();
     }
     public void playMultiMode(View view){
         Button buselected = (Button)view;
@@ -52,7 +53,6 @@ public class Game {
         else if(Player2.isActive()) {
             int index = emptyCells.get(0);
             Player2.findcellNumberByID(index);
-            System.out.println("DEBUG "+index);
             Button buselected = view.getRootView().findViewById(Player2.cellNumber);
             buselected.setEnabled(false);
             buselected.setBackgroundResource(R.drawable.o);
