@@ -12,9 +12,7 @@ public class UIplayer extends Player{
     protected void findcellNumberByID(int buttonid) {
             switch(buttonid){
                 case 1:
-                    System.out.println("DEBUG B "+R.id.button1);
                     this.cellNumber= R.id.button1;
-                    System.out.println("DEBUG A "+cellNumber);
                     break;
                 case 2:
                     this.cellNumber=R.id.button2;
