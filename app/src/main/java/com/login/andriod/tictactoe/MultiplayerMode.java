@@ -39,5 +39,14 @@ public class MultiplayerMode extends AppCompatActivity {
                 }
             }, 1500);
         }
+        else if(humanPlayer1.getCellsChoosen().size()+humanPlayer2.getCellsChoosen().size() == 9){
+            Toast.makeText(this, "It's a Tie Game. Shake Hands !", Toast.LENGTH_LONG).show();
+            new Timer().schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    finish();
+                }
+            }, 1500);
+        }
     }
 }
