@@ -39,13 +39,28 @@ We now have a working version, but since I want to practice the re-write of proj
 Those are open issues currently and will be taken care of along my free time. README will be updated with each Issue Fix subsequently.
 
 ### Improvement #1: Re-design the code. 
-The application was originally written as an MVC (Model View Controller) Architecture. However, the Objects/Classes design can be re-done in a much better way. Some problems I noticed in deisgn are listed below:
+The application was originally written as an MVC (Model View Controller) Architecture. While, I am keeping the same architecture, however the Objects/Classes design can be re-done in a much better way. Some problems I noticed in deisgn are listed below:
 
-- **View:** There are two Activities, one for each game mode. Those can be treated as one screen and pass intent extra information to indicate the type of players to be initiated. For that issue, I opened `Issue #11: Unify the In-Game Activity`.
+- **View:** There are two Activities, one for each game mode. Those can be treated as one screen and pass intent extra information to indicate the type of players to be initiated. For that issue, I opened `Issue #11: Unify the In-Game Activity`, reducing overall code and making design easier to trace.
 
 - **Model:** The Model classes are the Player class, and two children classes: UIPlayer, HumanPlayer. I noticed how I didn't adhere to naming conventions, encapsulation or polymorphism much back then but that's about to change. Also, a lot of boilerplate code can be saved from those classes. For that issue, I opened `Issue #12: Re-build Model And Controller`.
 
 - **Controller**: The controller in that case is the **Game** class. The Game class code is a mess and can be totally refined and optimized. This is closely related to the Player Model Class being refined. So, it will be included also in the `Issue #12: Re-build Model And Controller`.
+
+#### New Proper MVC Design
+
+- Model Classes:
+    - **Player** Abstract Player class for all specific player classes.
+    - **HumanPlayer** (Holds the symbol he/she plays with - Holds the cells chosen so fair by him/her - Knows how to play his/her turn's logic)
+    - **DeterministicComputerPlayer** (Holds the symbol it plays with - Holds the cells chosen so fair by it - Knows how to play it's turn's logic)  
+    - **Board**  (Holds information about the board structure and relation to button IDs - Keeps track of empty cells available each turn update)
+                 
+- Controller Class: 
+    - **GameController**
+        - Alternates turns between players. 
+        - Knows Winning Condition Logic.
+        - Knows Tie Condition Logic.
+                                   
 
 ### Improvement #2: AI Player.
 The Computer Player is currently a dummy player that just picks randomly it's choice, that was my knowledge back in 2017. Now, and since I know/built AI players for games before in the AI University course.  
@@ -56,3 +71,4 @@ Things that should be modified but can be plugged into any issue internally. (No
 
 - The Screens can be much improved especially the main window.
 - Why didn't I write a single comment back in 2017? Add comments man!. 
+- Add String literals to strings resources instead of hardcoding them into classes.
