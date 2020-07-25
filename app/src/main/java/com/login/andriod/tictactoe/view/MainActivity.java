@@ -1,10 +1,12 @@
-package com.login.andriod.tictactoe;
+package com.login.andriod.tictactoe.view;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.login.andriod.tictactoe.R;
 
 public class MainActivity extends AppCompatActivity {
     Button button1;
@@ -19,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void solo_click(View view) {
-        intent = new Intent(MainActivity.this,GameActivity.class);
+        intent = new Intent(MainActivity.this, GameActivity.class);
         intent.putExtra("SOLO_GAME_MODE",true);
         startActivity(intent);
     }
