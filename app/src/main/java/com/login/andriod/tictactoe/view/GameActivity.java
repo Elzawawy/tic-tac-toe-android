@@ -31,7 +31,7 @@ public class GameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-        isSoloGameMode = getIntent().getBooleanExtra("SOLO_GAME_MODE", true);
+        isSoloGameMode = getIntent().getBooleanExtra(getString(R.string.intent_extra_key_solo_game_mode), true);
         setupActivity();
     }
 
@@ -42,11 +42,11 @@ public class GameActivity extends AppCompatActivity {
             controller.playMultiMode(view);
         // check winning  or tie condition and show appropriate notification accordingly.
         if (controller.isPlayerWinner(player1))
-            notifyResultAndEndGame("Player X won !");
+            notifyResultAndEndGame(R.string.x_won);
         else if (controller.isPlayerWinner(player2))
-            notifyResultAndEndGame("Player O won !");
+            notifyResultAndEndGame(R.string.o_won);
         else if (controller.isTieGame())
-            notifyResultAndEndGame("It's a Tie Game. Shake Hands !");
+            notifyResultAndEndGame(R.string.tie_game);
     }
 
     private void setupActivity() {
@@ -59,9 +59,9 @@ public class GameActivity extends AppCompatActivity {
         controller = new GameController(board, player1, player2);
     }
 
-    private void notifyResultAndEndGame(String message) {
+    private void notifyResultAndEndGame(int messageRes) {
         // Show notification and then after a delay of 1.5 seconds finish activity.
-        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, messageRes, Toast.LENGTH_LONG).show();
         new Timer().schedule(new TimerTask() {
             @Override
             public void run() {

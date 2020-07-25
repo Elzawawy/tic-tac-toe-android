@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">TicTacToe</string>
+    <string name="intent_extra_key_solo_game_mode">SOLO_GAME_MODE</string>
+    <string name="x_won">Player X won !</string>
+    <string name="o_won">Player O won !</string>
+    <string name="tie_game">It\'s a Tie Game. Shake Hands !</string>
+
 </resources>
