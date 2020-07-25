@@ -4,8 +4,13 @@ import android.view.View;
 
 import java.util.ArrayList;
 
-/**
- * Created by Amr on 8/17/2017.
+/** Model Class: Player
+ * Abstract Player class for all specific player classes
+ * Holds the Board Instance injected by View.
+ * Holds the mark sign (X or O).
+ * Holds the cells chosen so far by a player.
+ * Author: Amr Elzawawy
+ * Date: 17-8-2017, Updated on 25-7-2020
  */
 
 public abstract class Player {

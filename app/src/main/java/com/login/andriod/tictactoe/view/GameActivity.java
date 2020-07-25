@@ -15,6 +15,12 @@ import com.login.andriod.tictactoe.model.Player;
 import java.util.Timer;
 import java.util.TimerTask;
 
+/**
+ * View Class: GameActivity
+ * The view where the Board appears and the game takes place.
+ * Author: Amr Elzawawy
+ * Date: 17-8-2017, Updated on 25-7-2020
+ */
 public class GameActivity extends AppCompatActivity {
     private Player player1;
     private Player player2;
@@ -45,13 +51,16 @@ public class GameActivity extends AppCompatActivity {
 
     private void setupActivity() {
         Board board = new Board();
+        // Player 1 is always Human, always takes X mark and always starts first.
         player1 = new HumanPlayer(board, R.drawable.x);
         player1.setActive(true);
+        // Player 2 is based on whether this is a solo-player mode game or multi-player mode game.
         player2 = isSoloGameMode ? new DeterministicComputerPlayer(board, R.drawable.o) : new HumanPlayer(board, R.drawable.o);
         controller = new GameController(board, player1, player2);
     }
 
     private void notifyResultAndEndGame(String message) {
+        // Show notification and then after a delay of 1.5 seconds finish activity.
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
         new Timer().schedule(new TimerTask() {
             @Override

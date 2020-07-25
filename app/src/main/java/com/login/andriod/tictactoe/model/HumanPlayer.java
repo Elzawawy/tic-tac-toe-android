@@ -4,7 +4,11 @@ import android.view.View;
 import android.widget.Button;
 
 /**
- * Created by Amr on 8/1/2017.
+ * Model Class: HumanPlayer
+ * A Human player model
+ * Knows how to play his own turn (operations to execute based on human click).
+ * Author: Amr Elzawawy
+ * Date: 17-8-2017, Updated on 25-7-2020
  */
 
 public class HumanPlayer extends Player {
@@ -15,9 +19,10 @@ public class HumanPlayer extends Player {
 
     @Override
     public void playTurn(View view) {
-        Button buttonSelected = (Button)view;
+        Button buttonSelected = (Button) view;
         // disable the button to avoid re-clicking on it.
         buttonSelected.setEnabled(false);
+        // display player's mark on the button selected.
         buttonSelected.setBackgroundResource(playerMark);
         // occupy a cell to be chosen by this player.
         addChosenCell(buttonSelected.getId());
