@@ -19,12 +19,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void solo_click(View view) {
-        intent = new Intent(MainActivity.this,SoloplayerMode.class);
+        intent = new Intent(MainActivity.this,GameActivity.class);
+        intent.putExtra("SOLO_GAME_MODE",true);
         startActivity(intent);
     }
 
     public void multiplayer_click(View view) {
-        intent = new Intent(MainActivity.this,MultiplayerMode.class);
+        intent = new Intent(MainActivity.this,GameActivity.class);
+        intent.putExtra("SOLO_GAME_MODE",false);
         startActivity(intent);
     }
 }
