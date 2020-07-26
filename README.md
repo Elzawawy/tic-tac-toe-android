@@ -5,10 +5,10 @@ This application was one of my first android indulgments, it is a simple tic-tac
 
 ## Why can this be useful ? 
 
-- For beginners, you can **relate to mistakes** I made back then or take notes of **improvemnts I add** along the way.  
+- For beginners, you can **relate to mistakes** I made back then or take notes of **improvemnts I add** along the way.
+- For beginners also, this can be a guide to build this app from scratch yourself.
 - I decided to even organize this in an **agile manner**, and will be adding a ticket issue for every problem I find and making a branch/issue to follow real work environment and make this repoistory more frutiful. 
 - Exploring the **rewrite of an old project process**, and how can this be important for self-imporvement goals. (It's my new side project)
-- 
 
 ## First Thoughts: Identifying the Bugs
 Oh my ! that's a mess :smile:, but hey no shame that was learning phase and am damn proud !  
@@ -77,4 +77,3 @@ Things that should be modified but can be plugged into any issue internally. (No
 <p align='center'>
     <img src="./demo/after.gif" width="380" height="600"/>
 </p>
-    
