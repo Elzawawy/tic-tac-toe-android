@@ -8,6 +8,7 @@ This application was one of my first android indulgments, it is a simple tic-tac
 - For beginners, you can **relate to mistakes** I made back then or take notes of **improvemnts I add** along the way.  
 - I decided to even organize this in an **agile manner**, and will be adding a ticket issue for every problem I find and making a branch/issue to follow real work environment and make this repoistory more frutiful. 
 - Exploring the **rewrite of an old project process**, and how can this be important for self-imporvement goals. (It's my new side project)
+- 
 
 ## First Thoughts: Identifying the Bugs
 Oh my ! that's a mess :smile:, but hey no shame that was learning phase and am damn proud !  
@@ -35,8 +36,7 @@ I decided to **list the bugs** I found and **my fixes** to them. Note that I wil
   - **Fix:** Exactly the same idea as the fix for Issue #4, show a message, delay for a second then go back automatically.
   
 ## Working isn't enough now ! Let's improve.
-We now have a working version, but since I want to practice the re-write of projects thing more. I am going to take extra measures and clean that mess up into a better working game.  
-Those are open issues currently and will be taken care of along my free time. README will be updated with each Issue Fix subsequently.
+We now have a working version, but since I want to practice the re-write of projects thing more. I am going to take extra measures and clean that mess up into a better working game.
 
 ### Improvement #1: Re-design the code. 
 The application was originally written as an MVC (Model View Controller) Architecture. While, I am keeping the same architecture, however the Objects/Classes design can be re-done in a much better way. Some problems I noticed in deisgn are listed below:
@@ -64,7 +64,7 @@ The application was originally written as an MVC (Model View Controller) Archite
 
 ### Improvement #2: AI Player.
 The Computer Player is currently a dummy player that just picks randomly it's choice, that was my knowledge back in 2017. Now, and since I know/built AI players for games before in the AI University course.  
-I think it's time to build a proper AI TicTacToe Player using the one and only famous **Minimax algorithm.** Am not certain when I'll have time for this or not but it's definitely a good add to this side project. For that issue, I opened `Issue #13: Build Minimax Agent`.
+I think it's time to build a proper AI TicTacToe Player using the one and only famous **Minimax algorithm** which is perfect to write a solver for TicTacToe with. Am not certain when I'll have time for this or not but it's definitely a good add to this side project. For that issue, I opened `Issue #13: Build Minimax Agent`.
 
 ### Improvement #3: UI/Code Clean-up. 
 Things that should be modified but can be plugged into any issue internally. (No need for new issues for it)
@@ -72,3 +72,9 @@ Things that should be modified but can be plugged into any issue internally. (No
 - The Screens can be much improved especially the main window.
 - Why didn't I write a single comment back in 2017? Add comments man!. 
 - Add String literals to strings resources instead of hardcoding them into classes.
+
+## The End Result
+<p align='center'>
+    <img src="./demo/after.gif" width="380" height="600"/>
+</p>
+    
