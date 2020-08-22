@@ -10,6 +10,8 @@ This application was one of my first android indulgments, it is a simple tic-tac
 - I decided to even organize this in an **agile manner**, and will be adding a ticket issue for every problem I find and making a branch/issue to follow real work environment and make this repoistory more frutiful. 
 - Exploring the **rewrite of an old project process**, and how can this be important for self-imporvement goals. (It's my new side project)
 
+---
+
 ## First Thoughts: Identifying the Bugs
 Oh my ! that's a mess :smile:, but hey no shame that was learning phase and am damn proud !  
 So, I ran the application to see what we have in our hands and I found out that the game have **multiple bugs.**
@@ -34,7 +36,9 @@ I decided to **list the bugs** I found and **my fixes** to them. Note that I wil
 - **Issue #5: It's a Tie, What now?**
   - Another issue I found is when a tie occurs, nothing happens, you have to go back manually to the main screen which is not a symmetric action with the winning condition. 
   - **Fix:** Exactly the same idea as the fix for Issue #4, show a message, delay for a second then go back automatically.
-  
+
+---
+
 ## Working isn't enough now ! Let's improve.
 We now have a working version, but since I want to practice the re-write of projects thing more. I am going to take extra measures and clean that mess up into a better working game.
 
@@ -77,3 +81,7 @@ Things that should be modified but can be plugged into any issue internally. (No
 <p align='center'>
     <img src="./demo/after.gif" width="380" height="600"/>
 </p>
+
+---
+
+<h3 align='center'>Made with :heart:</h3>
